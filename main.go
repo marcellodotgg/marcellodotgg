@@ -1,16 +1,23 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"os"
 
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 var router = gin.Default()
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
 	if os.Getenv("GIN_MODE") == "release" {
 		gin.SetMode(gin.ReleaseMode)
 	}
