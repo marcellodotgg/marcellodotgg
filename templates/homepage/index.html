@@ -6,11 +6,37 @@
     <title>Marcello's Portfolio</title>
     <meta name="description"
         content="Marcello's portfolio website. These are some of the things that Marcello has built over the years that I am allowed to share." />
-    {{ template "layout/head" }}
+    {{ template "layout/head" . }}
 </head>
 
 <body>
-    Coming Soon!
+    <header class="container">
+        <img alt="Marcello's Avatar" src="/static/assets/favicon.png" width="128" height="128" />
+        <div>
+            <h1>Marcello's <span class="highlight">Portfolio</span></h1>
+            <span class="pronounciation">(mar-CHEL-oh)</span>
+        </div>
+        <p id="brief-overview">
+            Creator of <a href="https://fun-banking.com">Fun Banking</a> to help educators and students to become
+            financially responsible. Author of <a
+                href="https://www.npmjs.com/package/@marcellodotgg/storage-bin">storage-bin</a>, an extremely simple
+            WebStorage abstraction built on top of IndexedDB. Angular Tech Lead professionally, HTMX and Go hobbyist.
+            I like creating useful tools to help the everyday individual, philosophy, and running.
+        </p>
+    </header>
+    <main>
+        <section class="grid container">
+            {{ range .Projects }}
+            <a href="{{ .Link }}">
+                <div>
+                    <h2>{{ .Name }}</h2>
+                    <p>{{ .Description }}</p>
+                </div>
+                <div class="language {{ .Language }}">{{ .Language }}</div>
+            </a>
+            {{ end }}
+        </section>
+    </main>
 </body>
 
 </html>

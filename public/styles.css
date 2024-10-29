@@ -1,1 +1,139 @@
+:root {
+  --bg: #0f0f12;
+  --fg: #fff;
+  
+  --highlight: #ff6e89;
+}
 
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--fg);
+    background: var(--bg);
+    margin: 0;
+    padding: 16px;
+    font: 1rem "Poppins"; 
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+
+    span.highlight {
+        color: var(--highlight);
+    }
+}
+
+p { margin: 0 }
+
+.container {
+    max-width: 964px;
+    margin: 0 auto;
+}
+
+header {
+    --link: #61e0ee;
+    --link-hover: #93f0fa;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+    a:link, a:visited, a:active {
+        color: var(--link);
+    }
+
+    a:hover {
+        color: var(--link-hover);
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 2.25rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    span.pronounciation {
+        font-size: 0.8rem;
+    }
+
+    p { margin-top: 16px; }
+}
+
+main {
+    margin-top: 24px;
+
+    section.grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        @media only screen and (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        a:link, a:visited, a:active {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: space-between;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid #2e2e33;
+            border-radius: 4px;
+            padding: 16px;
+        }
+
+        a:hover {
+            border-color: #49494d;
+        }
+
+        h2 {
+            font-size: 1rem;
+            line-height: 1rem;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        div.language {
+            display: flex;
+            align-items: center; 
+            gap: 4px;
+            font-size: 14px;
+        }
+
+        div.Go::before {
+            height: 11px;
+            width: 11px;
+            background: cyan;
+            border-radius: 100%;
+            display: block;
+            content: "";
+        }
+
+        div.JavaScript::before {
+            height: 11px;
+            width: 11px;
+            background: #ffd500;
+            border-radius: 100%;
+            display: block;
+            content: "";
+        }
+        
+        div.TypeScript::before {
+            height: 11px;
+            width: 11px;
+            background: #5457c7;
+            border-radius: 100%;
+            display: block;
+            content: "";
+        }
+    }
+}
