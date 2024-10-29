@@ -49,6 +49,18 @@ header {
         color: var(--link-hover);
     }
 
+    .desktop { display: block; }
+    .mobile { display: none; }
+
+    .heading-wrapper {
+        @media only screen and (max-width: 450px) {
+            text-align: center;
+
+            .desktop { display: none; }
+            .mobile { display: block; }
+        }
+    }
+
     h1 {
         font-size: 2rem;
         text-transform: uppercase;
