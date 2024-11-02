@@ -13,8 +13,8 @@ body {
     color: var(--fg);
     background: var(--bg);
     margin: 0;
-    padding: 16px;
-    font: 1rem "Poppins"; 
+    padding: 12px;
+    font: 1rem "Poppins", verdana, sans-serif; 
 }
 
 h1, h2, h3 {

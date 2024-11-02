@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
@@ -29,9 +30,17 @@ func main() {
 
 func setupMiddleware() {
 	router.Use(gzip.Gzip(gzip.DefaultCompression))
+	router.Use(cacheStaticFiles)
 	router.LoadHTMLGlob("templates/**/*")
 	router.Static("/static", "public/")
 	router.StaticFS("/.well-known/acme-challenge", http.Dir("/var/www/html/.well-known/acme-challenge"))
+}
+
+func cacheStaticFiles(ctx *gin.Context) {
+	if strings.Contains(ctx.Request.URL.Path, "/static") {
+		ctx.Writer.Header().Set("Cache-Control", "public, max-age=31536000")
+	}
+	ctx.Next()
 }
 
 func setupRoutes() {
