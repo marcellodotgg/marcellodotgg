@@ -45,15 +45,17 @@ func cacheStaticFiles(ctx *gin.Context) {
 
 func setupRoutes() {
 	h := struct {
-		Hash     string
-		Projects []struct {
+		Hash             string
+		GitHubProfileURL string
+		Projects         []struct {
 			Name        string
 			Description string
 			Language    string
 			Link        string
 		}
 	}{
-		Hash: getBuildHash(),
+		Hash:             getBuildHash(),
+		GitHubProfileURL: "https://github.com/marcellodotgg",
 		Projects: []struct {
 			Name        string
 			Description string
@@ -61,9 +63,10 @@ func setupRoutes() {
 			Link        string
 		}{
 			{Name: "fun-banking", Description: "An innovative online banking simulator, used by thousands, designed to provide an engaging and informative platform for individuals to learn about banking.", Language: "Go", Link: "https://fun-banking.com"},
-			{Name: "storage-bin", Description: "A storage-like interface using IndexedDB under the hood. It is async, stores any type, and supports large datasets. LocalStorage and SessionStorage behaviors.", Language: "JavaScript", Link: "https://www.npmjs.com/package/@marcellodotgg/storage-bin"},
-			{Name: "retroboard-org", Description: "A free online retrospective tool to help lead the team to continuous improvement and stay on track. See feedback in real time, comment, and vote on cards.", Language: "TypeScript", Link: "https://retroboard.org"},
 			{Name: "go-estimate", Description: "A straight-to-the-point estimation tool for any sized team. No ads, no limits, just get to guessing in seconds.", Language: "Go", Link: "https://estimate.marcello.gg"},
+			{Name: "storage-bin", Description: "A storage-like interface using IndexedDB under the hood. It is async, stores any type, and supports large datasets. LocalStorage and SessionStorage behaviors.", Language: "JavaScript", Link: "https://www.npmjs.com/package/@marcellodotgg/storage-bin"},
+			{Name: "standard-deck", Description: "A library to create, shuffle, and play with a Standard Deck of Playing Cards. Allows you to focus on the game's rules while this library manages the deck itself.", Language: "Go", Link: "https://github.com/marcellodotgg/standard-deck"},
+			{Name: "retroboard-org", Description: "A free online retrospective tool to help lead the team to continuous improvement and stay on track. See feedback in real time, comment, and vote on cards.", Language: "TypeScript", Link: "https://retroboard.org"},
 		},
 	}
 

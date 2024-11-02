@@ -7,13 +7,14 @@
 
 html,
 body {
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
     color: var(--fg);
     background: var(--bg);
     margin: 0;
-    padding: 12px;
+    padding: 0;
     font: 1rem "Poppins", verdana, sans-serif; 
 }
 
@@ -40,6 +41,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center; 
+    padding: 12px 12px 0 12px;
 
     a:link, a:visited, a:active {
         color: var(--link);
@@ -77,7 +79,8 @@ header {
 }
 
 main {
-    margin-top: 24px;
+    margin: 24px 0;
+    padding: 0 12px;
 
     section.grid {
         display: grid;
@@ -142,10 +145,33 @@ main {
         div.TypeScript::before {
             height: 11px;
             width: 11px;
-            background: #5457c7;
+            background: #3178c6;
             border-radius: 100%;
             display: block;
             content: "";
         }
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 12px 12px;
+    background: #000;
+    color: #b1b1b1;
+    font-size: 12px;
+
+    a:link, a:visited, a:active {
+        display: flex;
+        align-items: center; 
+        gap: 8px;
+        color: #b1b1b1;
+    }
+
+    a:hover {
+        color: var(--fg);
     }
 }
