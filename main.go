@@ -62,7 +62,6 @@ func setupRoutes() {
 			Language    string
 			Link        string
 		}{
-			{Name: "wordford", Description: "🪼 A simple, yet powerful CMS that will help you make waves on the internet. Great for personal sites, small business, and enterprise.", Language: "Go", Link: "https://wordford.com"},
 			{Name: "fun-banking", Description: "An innovative online banking simulator, used by thousands, designed to provide an engaging and informative platform for individuals to learn about banking.", Language: "Go", Link: "https://fun-banking.com"},
 			{Name: "go-estimate", Description: "A straight-to-the-point estimation tool for any sized team. No ads, no limits, just get to guessing in seconds.", Language: "Go", Link: "https://estimate.marcello.gg"},
 			{Name: "storage-bin", Description: "A storage-like interface using IndexedDB under the hood. It is async, stores any type, and supports large datasets. LocalStorage and SessionStorage behaviors.", Language: "JavaScript", Link: "https://www.npmjs.com/package/@marcellodotgg/storage-bin"},
