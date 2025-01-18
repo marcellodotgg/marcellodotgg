@@ -1,50 +1,57 @@
 {{ define "homepage/index" }}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Marcello's Portfolio</title>
-    <meta name="description"
-        content="Marcello's portfolio website. These are some of the things that Marcello has built over the years that I am allowed to share." />
+    <meta
+      name="description"
+      content="Marcello's portfolio website. These are some of the things that Marcello has built over the years that I am allowed to share."
+    />
     {{ template "layout/head" . }}
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="container">
-        <img alt="Marcello's Avatar" tabindex="-1" src="/static/assets/favicon.webp" width="128" height="128" />
-        <div class="heading-wrapper">
-            <span class="pronounciation mobile">(mar-CHEL-oh)</span>
-            <h1>Marcello's <span class="highlight">Portfolio</span></h1>
-            <span class="pronounciation desktop">(mar-CHEL-oh)</span>
-        </div>
-        <p id="brief-overview">
-            Creator of <a href="https://fun-banking.com">Fun Banking</a> to help educators and students to become
-            financially responsible. Author of <a
-                href="https://www.npmjs.com/package/@marcellodotgg/storage-bin">storage-bin</a>, an extremely simple
-            WebStorage abstraction built on top of IndexedDB. Angular Tech Lead professionally, HTMX and Go hobbyist.
-            I like creating useful tools to help the everyday individual, philosophy, and running.
-        </p>
+      <img
+        alt="Marcello's Avatar"
+        tabindex="-1"
+        src="https://avatars.githubusercontent.com/u/104793781?v=4"
+        width="128"
+        height="128"
+      />
+      <div class="heading-wrapper">
+        <span class="pronounciation mobile">(mar-CHEL-oh)</span>
+        <h1>Marcello's <span class="highlight">Portfolio</span></h1>
+        <span class="pronounciation desktop">(mar-CHEL-oh)</span>
+      </div>
+      <p id="brief-overview">
+        Creator of <a href="https://fun-banking.com">Fun Banking</a> to help
+        educators and students to become financially responsible. Author of
+        <a href="https://www.npmjs.com/package/@marcellodotgg/storage-bin"
+          >storage-bin</a
+        >, an extremely simple WebStorage abstraction built on top of IndexedDB.
+        Angular Tech Lead professionally, HTMX/Go/Rust hobbyist. I like creating
+        useful tools to help the everyday individual, philosophy, and running.
+      </p>
     </header>
     <main>
-        <section class="grid container">
-            {{ range .Projects }}
-            <a href="{{ .Link }}">
-                <div>
-                    <h2>{{ .Name }}</h2>
-                    <p>{{ .Description }}</p>
-                </div>
-                <div class="language {{ .Language }}">{{ .Language }}</div>
-            </a>
-            {{ end }}
-        </section>
+      <section class="grid container">
+        {{ range .Projects }}
+        <a href="{{ .Link }}">
+          <div>
+            <h2>{{ .Name }}</h2>
+            <p>{{ .Description }}</p>
+          </div>
+          <div class="language {{ .Language }}">{{ .Language }}</div>
+        </a>
+        {{ end }}
+      </section>
     </main>
     <footer>
-        <a href="{{ .GitHubProfileURL }}">
-            Check out some more of my projects on
-            {{ template "icons/github" }}
-        </a>
+      <a href="{{ .GitHubProfileURL }}">
+        Check out some more of my projects on {{ template "icons/github" }}
+      </a>
     </footer>
-</body>
-
+  </body>
 </html>
 {{ end }}

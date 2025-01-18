@@ -2,10 +2,10 @@
   --bg: #0f0f12;
   --fg: #fff;
 
-  --link: #61e0ee;
-  --link-hover: #93f0fa;
+  --link: #96c7f2;
+  --link-hover: #bedefa;
 
-  --highlight: #ff6e89;
+  --highlight: #5194cf;
 }
 
 html,
@@ -67,6 +67,11 @@ header .desktop {
 
 header .mobile {
   display: none;
+}
+
+header img {
+  border-radius: 100%;
+  margin-bottom: 16px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -173,6 +178,15 @@ main div.TypeScript::before {
   height: 11px;
   width: 11px;
   background: #3178c6;
+  border-radius: 100%;
+  display: block;
+  content: "";
+}
+
+main div.Rust::before {
+  height: 11px;
+  width: 11px;
+  background: #dea584;
   border-radius: 100%;
   display: block;
   content: "";
