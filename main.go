@@ -64,6 +64,7 @@ func setupRoutes() {
 		}{
 			{Name: "fun-banking", Description: "An innovative online banking simulator, used by thousands, designed to provide an engaging and informative platform for individuals to learn about banking.", Language: "Go", Link: "https://fun-banking.com"},
 			{Name: "go-estimate", Description: "A straight-to-the-point estimation tool for any sized team. No ads, no limits, just get to guessing in seconds.", Language: "Go", Link: "https://estimate.marcello.gg"},
+			{Name: "etsy-rs", Description: "A wrapper for the Etsy API written in Rust", Language: "Rust", Link: "https://github.com/marcellodotgg/etsy-rs"},
 			{Name: "rusty-deck", Description: "My spin on standard-deck (a Go libary) written in Rust instead of Go.", Language: "Rust", Link: "https://github.com/marcellodotgg/rusty-deck"},
 			{Name: "storage-bin", Description: "A storage-like interface using IndexedDB under the hood. It is async, stores any type, and supports large datasets. LocalStorage and SessionStorage behaviors.", Language: "JavaScript", Link: "https://www.npmjs.com/package/@marcellodotgg/storage-bin"},
 			{Name: "standard-deck", Description: "A library to create, shuffle, and play with a Standard Deck of Playing Cards. Allows you to focus on the game's rules while this library manages the deck itself.", Language: "Go", Link: "https://github.com/marcellodotgg/standard-deck"},
