@@ -63,6 +63,7 @@ func setupRoutes() {
 			Link        string
 		}{
 			{Name: "fun-banking", Description: "An innovative online banking simulator, used by thousands, designed to provide an engaging and informative platform for individuals to learn about banking.", Language: "Go", Link: "https://fun-banking.com"},
+			{Name: "fwdr", Description: "The (self proclaimed) world's most simple and efficient e-mail forwarder for everyone", Language: "Rust", Link: "https://fwdr.dev"},
 			{Name: "go-estimate", Description: "A straight-to-the-point estimation tool for any sized team. No ads, no limits, just get to guessing in seconds.", Language: "Go", Link: "https://estimate.marcello.gg"},
 			{Name: "ngx-validators", Description: "A library that provides additional Angular Validators, including the ones Angular provides. Useful for validators in one spot. Supporting a wide-variety of situations.", Language: "TypeScript", Link: "https://github.com/marcellodotgg/ngx-validators"},
 			{Name: "etsy-rs", Description: "A wrapper for the Etsy API written in Rust", Language: "Rust", Link: "https://github.com/marcellodotgg/etsy-rs"},
