@@ -66,7 +66,7 @@ func setupRoutes() {
 			{Name: "fwdr", Description: "The (self proclaimed) world's most simple and efficient e-mail forwarder for everyone", Language: "Rust", Link: "https://fwdr.dev"},
 			{Name: "go-estimate", Description: "A straight-to-the-point estimation tool for any sized team. No ads, no limits, just get to guessing in seconds.", Language: "Go", Link: "https://estimate.marcello.gg"},
 			{Name: "ngx-validators", Description: "A library that provides additional Angular Validators, including the ones Angular provides. Useful for validators in one spot. Supporting a wide-variety of situations.", Language: "TypeScript", Link: "https://github.com/marcellodotgg/ngx-validators"},
-			{Name: "etsy-rs", Description: "A wrapper for the Etsy API written in Rust", Language: "Rust", Link: "https://github.com/marcellodotgg/etsy-rs"},
+			{Name: "axum-template", Description: "An axum template repository with sqlx, docker, and OAuth set up", Language: "Rust", Link: "https://github.com/marcellodotgg/axum-template"},
 			{Name: "rusty-deck", Description: "My spin on standard-deck (a Go libary) written in Rust instead of Go.", Language: "Rust", Link: "https://github.com/marcellodotgg/rusty-deck"},
 			{Name: "storage-bin", Description: "A storage-like interface using IndexedDB under the hood. It is async, stores any type, and supports large datasets. LocalStorage and SessionStorage behaviors.", Language: "JavaScript", Link: "https://www.npmjs.com/package/@marcellodotgg/storage-bin"},
 			{Name: "standard-deck", Description: "A library to create, shuffle, and play with a Standard Deck of Playing Cards. Allows you to focus on the game's rules while this library manages the deck itself.", Language: "Go", Link: "https://github.com/marcellodotgg/standard-deck"},
